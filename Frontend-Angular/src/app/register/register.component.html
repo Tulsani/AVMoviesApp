@@ -1,0 +1,44 @@
+
+<!-- Adding Register Content -->
+<div class="container-fluid" style="overflow: hidden;">
+    <div class="row">
+      <div class="col-md-6">
+        <app-base></app-base>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8" style="margin-top: 9%;">
+            <div class="text-center"><img src="../../assets/logo.png" height="65" width="auto"></div>
+            <div *ngIf="success_registration" style="color: green;">Thank you for registering please check your registered email id for verfication link</div>
+            <div *ngIf="failed_registration" style="color: red;">Registration Failed , please ensure all inputs. {{failed_detail }}</div>
+            <form (ngSubmit)="register(regform)" #regform="ngForm">
+              <div class="form-group">
+                  <div class="form-group">
+                    <label for="phone_number">Name</label>
+                    <input type="text" name="name" id="name" ngModel class="form-control" required>
+                  </div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" ngModel class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" ngModel class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="conf_password">Confirm Password</label>
+                <input type="password" name="cong_password" id="conf_password" ngModel class="form-control" required>
+              </div>
+    
+             <div *ngIf="!success_registration"><button type="submit" class="btn btn-primary">Register</button>
+              <div>Already have an account? &nbsp;<a routerLink="/login">Login</a></div>
+            </div>
+             <div *ngIf="success_registration"> <a routerLink='/login' class="btn btn-success">Login</a></div>
+             
+            </form>
+      </div>
+      </div>
+      </div>
+    </div>
+    <br />
+  </div>

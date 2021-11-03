@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+<div class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-md-2">
+            <!-- List of movies -->
+        </div>
+        <div class="col-md-8">
+            <!-- Iterate over list -->
+            <mat-card class="example-card">
+                <mat-card-title>Welcome Back !</mat-card-title>
+                <mat-card-title>{{userDetail.name}}</mat-card-title>
+                <mat-card-subtitle>{{userDetail.email}}</mat-card-subtitle>
+                <mat-card-content>
+                  <p> Movies that you have rented before!.</p>
+                  <!-- <p>{{longText}}</p> -->
+                  <!-- <mat-divider inset></mat-divider> -->
+                  <div class="container-fluid">
+                      <div class="row-fluid">
+                          <div class="col-md-10">
+                              <!-- Adding cards -->
+                              <!-- here are cards -->
+                              <div *ngFor="let movie of rentedMovies">
+                              <mat-card class="example-card mt-3">
+                                <mat-card-header>
+                                  <mat-card-title>{{movie.title}}</mat-card-title>
+                                  <mat-card-subtitle>{{movie.genre}}</mat-card-subtitle>
+                                </mat-card-header>
+                                <img mat-card-image src="{{movie.movietilelink}}">
+                                <mat-card-content>
+                                  <p>
+                                    {{movie.description}}
+                                  </p>
+                                </mat-card-content>
+                                <mat-card-actions align="end">
+                                  <button mat-button>LIKE</button>
+                                  <button mat-button>SHARE</button>
+                                </mat-card-actions>
+                              </mat-card>
+                            </div>
+                          </div>
+                        <div class="col-md-2"></div>
+                      </div>
+                  </div>
+                </mat-card-content>
+                <mat-card-actions>
+                  <!-- <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button> -->
+                </mat-card-actions>
+              </mat-card>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>

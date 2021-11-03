@@ -1,0 +1,134 @@
+/* 
+background image 
+*/
+
+.background_image {
+    background-image: url('../../assets/Netflix-background_860c8ece6b34fb4f43af02255ca8f225.jpg');
+    opacity: 0.5;
+    z-index: -1;
+    background-size: cover;
+    background-position-y: 50px;
+    height: 100vh !important;
+}
+
+
+/* 
+purple color overlay 
+*/
+
+.overlay {
+    height: 100vh !important;
+    background:  rgba(12, 12, 223, 0.87) !important;
+     /* background: rgba(82, 80, 77, 0.3); */
+}
+
+
+/* 
+Headin for base component CSS 
+*/
+
+#base_component_heading {
+    color: #ffffff;
+    font-size: 30px;
+    padding-top: 20%;
+    padding-bottom: 3%;
+    text-align: center !important;
+    font-family: Heebo !important;
+    font-size: 32px !important;
+    font-weight: 600 !important;
+    line-height: 47px !important;
+}
+
+#CCcontent {
+    padding-top: 5%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 0.75;
+}
+
+#CCcontenthead {
+    padding-top: 3%;
+    color: #fff;
+    font-size: 19px;
+    text-align: center !important;
+}
+
+#bottomtext {
+    color: #fff;
+    padding-left: 5% !important;
+    padding-bottom: 1%;
+    float: left;
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-size: 12px;
+}
+
+
+/* supporting institutions images */
+
+#bottom {
+    padding-left: 20%;
+}
+
+#polly_logo_image {
+    padding-left: 5%;
+    padding-top: 3%;
+}
+
+.bottomImages {
+    padding-left: 5% !important;
+}
+
+
+/* ############### Normaliztioion ##########*/
+
+.container-fluid {
+    padding-left: 0px !important;
+}
+
+.col-md-12 {
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+}
+
+.col-md-6 {
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+}
+
+
+/*
+ media query for various screen sizes
+  */
+
+@media screen and (min-width:1500px) {
+    #bottom {
+        padding-top: 20%;
+    }
+}
+
+@media screen and (min-width:1250px) {
+    #centercontent {
+        min-height: 200px;
+    }
+}
+
+#centercontent {
+    min-height: 485px;
+}
+
+
+/* end of CSS */
+
+.style_height_100vh {
+    height: 100vh !important;
+}
+
+#padding_image {
+    padding: 0px 20px 0px 10px !important;
+}
+
+vertical_align_center {
+    vertical-align: center !important;
+}
+
